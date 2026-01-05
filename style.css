@@ -3,7 +3,9 @@
  * Minimal css theme.
  * Project: https://github.com/oxalorg/sakura/
  */
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+ :root {
   --hover-accent-color: #ff6dc0; /* Define the hover color variable */
   --accent-color: #cc40a7;
   --background-color: #ffd1eb;
@@ -13,11 +15,11 @@
 /* Body */
 html {
   font-size: 62.5%;
-  font-family: Merriweather, serif;
 }
 
 body {
   font-size: 1.8rem;
+  font-family: Arial, sans-serif;
   line-height: 1.618;
   max-width: 38em;
   margin: auto;
@@ -44,7 +46,7 @@ h4,
 h5,
 h6 {
   line-height: 1.1;
-  font-family: Merriweather, serif;
+  font-family: "Lilita One";
   font-weight: 600;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
