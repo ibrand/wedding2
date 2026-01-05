@@ -1,398 +1,273 @@
+/* Sakura.css v1.5.0
+ * ================
+ * Minimal css theme.
+ * Project: https://github.com/oxalorg/sakura/
+ */
+:root {
+  --hover-accent-color: #ff6dc0; /* Define the hover color variable */
+  --accent-color: #cc40a7;
+  --background-color: #ffd1eb;
+  --text-color: #002284;
+}
 
-/* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Body */
+html {
+  font-size: 62.5%;
+  font-family: Merriweather, serif;
 }
 
 body {
-    font-family: 'Merriweather', serif;
-    line-height: 1.6;
-    color: #2f4e96;
-    background-color: #fefaf2;
+  font-size: 1.8rem;
+  line-height: 1.618;
+  max-width: 38em;
+  margin: auto;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
-.responsive-image {
-    display: block; /* Removes any extra space below the image if it were inline */
-    width: 100%;   /* Makes the image take the full width of its parent (.content-wrapper) */
-    height: auto;  /* Maintains the aspect ratio */
+@media (max-width: 684px) {
+  body {
+    font-size: 1.53rem;
+  }
+}
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  font-family: Merriweather, serif;
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+h1 {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 4rem;
+  margin-top: 5rem;
+  font-style: italic;
+  font-weight: 100;
 }
 
-/* Header */
-.header {
-    text-align: center;
-    margin-bottom: 3rem;
+h2 {
+  font-size: 2em;
 }
 
-.main-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #2f4e96;
+h3 {
+  font-size: 1.75em;
+  text-align: center;
 }
 
-.version {
-    background-color: #f794f1;
-    color: white;
-    padding: 0.25rem 0.5rem;
-    font-size: 2rem;
+h4 {
+  font-size: 1.5em;
 }
 
-.subtitle {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-    color: #2f4e96;
+h5 {
+  font-size: 1.25em;
 }
 
-.intro {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+h6 {
+  font-size: 1em;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-/* Sections */
-.section {
-    margin-bottom: 3rem;
+p {
+  margin-top: 0px;
+  margin-bottom: 2.5rem;
 }
 
-.section-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #2f4e96;
+small,
+sub,
+sup {
+  font-size: 75%;
 }
 
-.section-description {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    line-height: 1.8;
+hr {
+  border-color: var(--accent-color);
 }
 
-/* Schedule Table */
-.schedule-container {
-    overflow-x: auto;
-    margin-bottom: 2rem;
+a {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+a:visited {
+  color: var(--accent-color);
 }
 
-.schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ul {
+  padding-left: 1.4em;
+  margin-top: 0px;
+  margin-bottom: 2.5rem;
 }
 
-.schedule-table td {
-    padding: 1rem;
-    border-bottom: 1px solid #e5e7eb;
-    vertical-align: top;
+li {
+  margin-bottom: 0.4em;
 }
 
-.date-cell {
-    background-color: #fcfbf1;
-    font-weight: 500;
-    min-width: 120px;
+img,
+video {
+  height: auto;
+  max-width: 100%;
+  margin-top: 0px;
+  margin-bottom: 2.5rem;
+  border-radius: 25px;
 }
 
-.event-cell {
-    background-color: #fcfbf1;
-    font-weight: 500;
-    min-width: 100px;
+/* Pre and Code */
+pre {
+  background-color: #f1f1f1;
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+  margin-top: 0px;
+  margin-bottom: 2.5rem;
+  font-size: 0.9em;
 }
 
-.location-cell {
-    background-color: #fcfbf1;
+code,
+kbd,
+samp {
+  font-size: 0.9em;
+  padding: 0 0.5em;
+  background-color: #f1f1f1;
+  white-space: pre-wrap;
 }
 
-.schedule-table a {
-    color: #1155cc;
-    text-decoration: underline;
+pre > code {
+  padding: 0;
+  background-color: transparent;
+  white-space: pre;
+  font-size: 1em;
 }
 
-/* Event Cards */
-.event-card {
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Tables */
+table {
+  text-align: left-align;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
 }
 
-.main-event {
-    border-left: 4px solid #fac7c3;
+td,
+th {
+  padding: 0.5em;
+  border-bottom: 1px solid #f1f1f1;
 }
 
-.event-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    text-align: center;
+label,
+legend,
+fieldset {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
-.event-subtitle {
-    text-align: center;
-    font-style: italic;
-    margin-bottom: 1rem;
-    color: #666;
+/* Hamburger Menu */
+.hamburger-menu {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1001;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Center SVG vertically */
+  justify-content: center; /* Center SVG horizontally */
+  width: 48px; /* Increased width */
+  height: 48px; /* Increased height */
+  box-sizing: border-box;
+  border-radius: 50%; /* Added for default circular shape */
+  transition: background-color 0.3s ease-in-out; /* Added for smooth hover */
 }
 
-.event-meta {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #e5e7eb;
+.hamburger-menu:hover {
+  background-color: var(
+    --hover-accent-color
+  ); /* Use variable for hamburger hover */
 }
 
-.event-date {
-    font-weight: 700;
-    font-size: 1.1rem;
+.hamburger-menu svg.hamburger-icon {
+  width: 100%; /* Make SVG fill button width */
+  height: 100%; /* Make SVG fill button height */
 }
 
-.event-time {
-    margin: 0.5rem 0;
+.hamburger-menu.hamburger-hidden {
+  display: none;
 }
 
-.event-location a {
-    color: #1155cc;
-    text-decoration: underline;
+/* Side Panel */
+.side-panel {
+  position: fixed;
+  top: 0;
+  right: -282px; /* width (280px) + shadow offset (2px) */
+  width: 280px;
+  height: 100%;
+  background-color: #f5f3ed; /* Match body background */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out;
+  z-index: 1000; /* Below hamburger when closed, but above content */
+  padding: 20px;
+  padding-top: 60px; /* Space for close button */
+  overflow-y: auto;
+  box-sizing: border-box; /* Ensure padding is within the width */
 }
 
-.event-details {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+.side-panel.open {
+  right: 0; /* Slide in */
 }
 
-.detail-row {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.side-panel .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.detail-label {
-    font-weight: 700;
-    color: #2f4e96;
-    background-color: #fac7c3;
-    padding: 0.5rem;
-    border-radius: 4px;
+.side-panel .close-btn:hover {
+  background-color: var(--hover-accent-color);
 }
 
-.detail-content {
-    padding: 0.5rem;
+.side-panel .close-btn svg.close-icon {
+  width: 75%;
+  height: 75%;
 }
 
-.dress-section {
-    margin-bottom: 1rem;
+#side-panel-nav a {
+  display: block;
+  padding: 10px 0;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-.dress-section ul {
-    margin-left: 1.5rem;
-    margin-top: 0.5rem;
-}
-
-.detail-content ul {
-    margin-left: 1.5rem;
-}
-
-/* Info Cards */
-.info-card {
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.info-item {
-    margin-bottom: 1.5rem;
-}
-
-.info-item:last-child {
-    margin-bottom: 0;
-}
-
-.info-title {
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: #2f4e96;
-}
-
-/* Color Palette */
-.color-palette {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.color-item {
-    background: white;
-    border-radius: 8px;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.color-swatch {
-    width: 100%;
-    height: 80px;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-    border: 2px solid rgba(47, 78, 150, 0.2);
-}
-
-.color-name {
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-}
-
-.color-code {
-    font-size: 0.9rem;
-    color: #666;
-}
-
-/* Highlight Box */
-.highlight-box {
-    background-color: #fcfbf1;
-    padding: 1rem;
-    border-radius: 8px;
-    margin-top: 1rem;
-    border-left: 4px solid #fac7c3;
-}
-
-/* FAQ */
-.faq-item {
-    margin-bottom: 2rem;
-}
-
-.faq-item:last-child {
-    margin-bottom: 0;
-}
-
-.faq-question {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: #2f4e96;
-}
-
-.faq-answer {
-    margin-bottom: 1rem;
-}
-
-/* Charity Table */
-.charity-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-}
-
-.charity-table th,
-.charity-table td {
-    padding: 0.75rem;
-    text-align: left;
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.charity-table th {
-    background-color: #fcfbf1;
-    font-weight: 700;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .container {
-        padding: 1rem 0.75rem;
-    }
-    
-    .main-title {
-        font-size: 2rem;
-    }
-    
-    .version {
-        font-size: 1.5rem;
-    }
-    
-    .subtitle {
-        font-size: 1.25rem;
-    }
-    
-    .intro {
-        font-size: 1rem;
-    }
-    
-    .section-title {
-        font-size: 1.5rem;
-    }
-    
-    .event-card {
-        padding: 1.5rem;
-    }
-    
-    .info-card {
-        padding: 1.5rem;
-    }
-    
-    .schedule-table td {
-        padding: 0.75rem;
-        font-size: 0.9rem;
-    }
-    
-    .detail-row {
-        flex-direction: column;
-    }
-    
-    .color-palette {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.75rem;
-    }
-    
-    .color-swatch {
-        height: 60px;
-    }
-}
-
-@media (max-width: 480px) {
-    .main-title {
-        font-size: 1.75rem;
-    }
-    
-    .version {
-        font-size: 1.25rem;
-        padding: 0.2rem 0.4rem;
-    }
-    
-    .subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .event-card {
-        padding: 1rem;
-    }
-    
-    .info-card {
-        padding: 1rem;
-    }
-    
-    .color-palette {
-        grid-template-columns: 1fr;
-    }
-    
-    .schedule-table {
-        font-size: 0.85rem;
-    }
-    
-    .schedule-table td {
-        padding: 0.5rem;
-    }
+#side-panel-nav a:hover {
+  color: var(--hover-accent-color);
 }
