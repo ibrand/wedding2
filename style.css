@@ -104,12 +104,13 @@ hr {
   border-color: var(--accent-color);
 }
 
-a {
+a, a:visited {
   text-decoration: underline;
   color: var(--accent-color);
 }
-a:visited {
-  color: var(--accent-color);
+
+td a, td a:visited {
+  color: var(--text-color);
 }
 
 ul {
