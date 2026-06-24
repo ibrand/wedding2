@@ -181,38 +181,22 @@ fieldset {
   font-weight: 600;
 }
 
-/* Hamburger Menu */
-.hamburger-menu {
-  position: fixed;
-  top: 16px;
-  right: 16px;
-  z-index: 1001;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+nav {
   display: flex;
-  align-items: center; /* Center SVG vertically */
-  justify-content: center; /* Center SVG horizontally */
-  width: 48px; /* Increased width */
-  height: 48px; /* Increased height */
-  box-sizing: border-box;
-  border-radius: 50%; /* Added for default circular shape */
-  transition: background-color 0.3s ease-in-out; /* Added for smooth hover */
+  justify-content: space-around;
+  list-style-type: none;
 }
 
-.hamburger-menu:hover {
-  background-color: var(
-    --hover-accent-color
-  ); /* Use variable for hamburger hover */
+nav a {
+  font-weight: bold;
 }
 
-.hamburger-menu svg.hamburger-icon {
-  width: 100%; /* Make SVG fill button width */
-  height: 100%; /* Make SVG fill button height */
+nav .not-current {
+  text-decoration: none;
 }
 
-.hamburger-menu.hamburger-hidden {
-  display: none;
+nav .current {
+  text-decoration-style: wavy;
 }
 
 /* Side Panel */
