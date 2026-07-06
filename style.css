@@ -10,11 +10,12 @@
   --accent-color: #cc40a7;
   --background-color: #ffd1eb;
   --text-color: #002284;
+  --text-color-less-opacity: #00218446;
 }
 
 /* Body */
 html {
-  font-size: 62.5%;
+  font-size: 65%;
 }
 
 body {
@@ -170,7 +171,7 @@ table {
 td,
 th {
   padding: 0.5em;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid var(--text-color-less-opacity);
 }
 
 label,
