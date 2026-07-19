@@ -48,12 +48,30 @@ body {
   margin: 0px;
 }
 
+.done {
+  opacity: 0.5;
+}
+
+.you-are-here {
+  position: relative;
+  left: -15rem;
+  top: 33rem;
+  display: block;
+}
+
 @media (max-width: 684px) {
   body {
     font-size: 1.53rem;
   }
+  .you-are-here {
+    display: none;
+  }
 }
 @media (max-width: 382px) {
+  .you-are-here {
+    display: none;
+  }
+
   body {
     font-size: 1.35rem;
   }
